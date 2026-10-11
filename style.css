@@ -1,0 +1,365 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #000;
+  color: #fff;
+  overflow-x: hidden;
+}
+
+/* ================= NAVBAR ================= */
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 70px;
+  z-index: 1000;
+  transition: 0.4s;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.9), transparent);
+}
+
+.logo img {
+  width: 150px;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 35px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 16px;
+  transition: 0.3s;
+}
+
+.nav-links a:hover {
+  color: #e50914;
+}
+
+.sign-btn {
+  background: #e50914;
+  color: #fff;
+  border: none;
+  padding: 10px 22px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 15px;
+  transition: 0.3s;
+}
+
+.sign-btn:hover {
+  background: #b20710;
+}
+
+/* ================= HERO ================= */
+
+.hero {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.hero-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    #000 8%,
+    rgba(0, 0, 0, 0.35),
+    rgba(0, 0, 0, 0.75)
+  );
+}
+
+.hero-content {
+  position: absolute;
+  left: 80px;
+  bottom: 100px;
+  max-width: 650px;
+  z-index: 2;
+}
+
+.hero-content h1 {
+  font-size: 65px;
+  margin-bottom: 20px;
+}
+
+.hero-content p {
+  font-size: 18px;
+  color: #ddd;
+  line-height: 1.8;
+  margin-bottom: 30px;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 18px;
+}
+
+.hero-buttons button {
+  padding: 15px 35px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 17px;
+  transition: 0.3s;
+}
+
+#watchBtn {
+  background: #e50914;
+  color: #fff;
+}
+
+#watchBtn:hover {
+  background: #b20710;
+}
+
+#infoBtn {
+  background: rgba(255, 255, 255, 0.2);
+  color: #fff;
+  backdrop-filter: blur(10px);
+}
+
+#infoBtn:hover {
+  background: rgba(255, 255, 255, 0.35);
+}
+
+/* ================= MOVIES ================= */
+
+.movies-section {
+  padding: 50px 60px;
+}
+
+.movies-section h2 {
+  margin-bottom: 25px;
+  font-size: 30px;
+}
+
+.movie-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+/* ================= MOVIE CARDS ================= */
+
+.movie-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.4s ease;
+  background: #111;
+}
+
+.movie-card img {
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+  display: block;
+  transition: 0.4s;
+}
+
+.movie-card h3 {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  padding: 12px;
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.95));
+  font-size: 17px;
+  color: #fff;
+}
+
+.movie-card:hover {
+  transform: scale(1.08);
+  z-index: 10;
+  box-shadow: 0 15px 35px rgba(229, 9, 20, 0.5);
+}
+
+.movie-card:hover img {
+  transform: scale(1.1);
+}
+
+/* ================= INFO SECTION ================= */
+
+.info-section {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+  padding: 60px;
+}
+
+.info-card {
+  background: #181818;
+  padding: 30px;
+  border-radius: 12px;
+  transition: 0.4s;
+}
+
+.info-card:hover {
+  transform: translateY(-10px);
+  background: #252525;
+}
+
+.info-card h2 {
+  color: #e50914;
+  margin-bottom: 15px;
+}
+
+.info-card p {
+  color: #ccc;
+  line-height: 1.8;
+}
+
+/* ================= FOOTER ================= */
+
+footer {
+  background: #080808;
+  padding: 50px 60px;
+  text-align: center;
+}
+
+.footer-logo {
+  width: 170px;
+  margin: 0 auto 20px;
+}
+
+.footer-content p {
+  color: #aaa;
+  line-height: 1.8;
+}
+
+.footer-links {
+  margin: 30px 0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.footer-links a {
+  color: #fff;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.footer-links a:hover {
+  color: #e50914;
+}
+
+.copyright {
+  margin-top: 30px;
+  color: #777;
+  border-top: 1px solid #333;
+  padding-top: 20px;
+}
+
+/* ================= SCROLLBAR ================= */
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #111;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #e50914;
+  border-radius: 20px;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 992px) {
+  .navbar {
+    padding: 18px 25px;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .hero-content {
+    left: 30px;
+    right: 30px;
+    bottom: 70px;
+  }
+
+  .hero-content h1 {
+    font-size: 42px;
+  }
+
+  .hero-content p {
+    font-size: 16px;
+  }
+
+  .movies-section,
+  .info-section,
+  footer {
+    padding: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+  }
+
+  .hero-buttons button {
+    width: 100%;
+  }
+
+  .movie-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .movie-card img {
+    height: 230px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-content h1 {
+    font-size: 30px;
+  }
+
+  .hero-content p {
+    font-size: 14px;
+  }
+
+  .movie-container {
+    grid-template-columns: 1fr;
+  }
+
+  .movie-card img {
+    height: 320px;
+  }
+}
